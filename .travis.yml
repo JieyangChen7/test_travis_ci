@@ -1,6 +1,7 @@
 language: python
 install: 
   - git clone https://github.com/lanl/BEE.git
+  - ./BEE/install.sh
 script: true
 notifications:
   email: false
