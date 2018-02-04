@@ -1,4 +1,4 @@
-language: python
+language: cpp
 install: 
   - git clone https://github.com/lanl/BEE.git
   - ./BEE/install.sh
