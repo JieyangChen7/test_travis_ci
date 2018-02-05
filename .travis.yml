@@ -4,8 +4,7 @@ install:
   - cd ./BEE
   - git checkout jieyang-dev
   - ./install.sh
-  - echo $HOME
-  - export PATH=$HOME/BEE/bee-launcher:$PATH
+  - export PATH=$(pwd)/bee-launcher:$PATH
   - bee_launcher.py
 script: true
 notifications:
