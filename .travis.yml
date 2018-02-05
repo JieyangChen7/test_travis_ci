@@ -5,7 +5,7 @@ install:
   - git checkout jieyang-dev
   - ./install.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
-  - bee_launcher.py
+  - openstack --version
 script: true
 notifications:
   email: false
