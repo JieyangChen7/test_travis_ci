@@ -6,14 +6,15 @@ install:
   - git checkout jieyang-dev
   - ./install.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
-  - export OS_AUTH_URL=https://chi.uc.chameleoncloud.org:5000/v2.0
-  - export OS_TENANT_ID=3dbec77dc346466380d53adf7d39753b
-  - export OS_TENANT_NAME="CH-819321"
-  - export OS_USERNAME="cjy7117"
-  - export OS_PASSWORD="lanlBEE123"
+#  - export OS_AUTH_URL=https://chi.uc.chameleoncloud.org:5000/v2.0
+#  - export OS_TENANT_ID=3dbec77dc346466380d53adf7d39753b
+#  - export OS_TENANT_NAME="CH-819321"
+#  - export OS_USERNAME="cjy7117"
+#  - export OS_PASSWORD="lanlBEE123"
   - openstack --version
   - cd examples/bee-launcher-example/flecsale/bee-os/
-  - bee_ci_launcher.py -l flecsale -r ddf31d80-a961-4126-8ffe-311c74247721
+#  - bee_ci_launcher.py -l flecsale -r ddf31d80-a961-4126-8ffe-311c74247721
+  - bee_ci_launcher.py -l flecsale -r $OS_RESERVATION_ID
 script: true
 notifications:
   email: false
