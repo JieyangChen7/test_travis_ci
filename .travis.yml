@@ -13,7 +13,7 @@ install:
   - export OS_PASSWORD="lanlBEE123"
   - openstack --version
   - cd examples/bee-launcher-example/flecsale/bee-os/
-  - bee_ci_launcher.py -l flecsale
+  - bee_ci_launcher.py -l flecsale -r ddf31d80-a961-4126-8ffe-311c74247721
 script: true
 notifications:
   email: false
