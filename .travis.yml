@@ -1,5 +1,6 @@
 language: cpp
 install: 
+  - echo $OS_RESERVATION_ID
   - python test.py
   - git clone https://github.com/lanl/BEE.git
   - cd ./BEE
