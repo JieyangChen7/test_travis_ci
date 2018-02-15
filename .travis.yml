@@ -1,11 +1,9 @@
 language: cpp
 install: 
-
   - git clone https://github.com/lanl/BEE.git
   - cd ./BEE
   - git checkout jieyang-dev
-  - ./install.sh
-  - export PATH=$(pwd)/bee-launcher:$PATH
+  - ./install_on_travis.sh
 script: 
   - cd examples/bee-launcher-example/vpic-paraview/bee-os/
   - bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
