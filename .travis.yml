@@ -1,11 +1,15 @@
 language: cpp
 install: 
-# install BEE for scalability test
+# Install BEE for scalability test
   - git clone https://github.com/lanl/BEE.git && cd ./BEE
   - git checkout jieyang-dev
   - ./install_on_travis.sh
+# Install other necesaary packages needed for the original CI
 script: 
-# do scalability test using VPIC as an example
+# Do original test.
+# Push Docker image to DockerHub
+# Compose beefile for scalability test with parameters (e.g., # of nodes)
+# Do scalability test using VPIC as an example
   - cd examples/bee-launcher-example/vpic-paraview/bee-os/
   - bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
 
