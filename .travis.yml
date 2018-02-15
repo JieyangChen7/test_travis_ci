@@ -1,10 +1,11 @@
 language: cpp
 install: 
-  - git clone https://github.com/lanl/BEE.git
-  - cd ./BEE
+# install BEE for scalability test
+  - git clone https://github.com/lanl/BEE.git && cd ./BEE
   - git checkout jieyang-dev
   - ./install_on_travis.sh
 script: 
+# do scalability test using VPIC as an example
   - cd examples/bee-launcher-example/vpic-paraview/bee-os/
   - bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
 
