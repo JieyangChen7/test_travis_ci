@@ -7,8 +7,8 @@ install:
   - ./install.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
 script: 
-  - cd examples/bee-launcher-example/flecsale/bee-os/
-  - bee_ci_launcher.py -l flecsale -r $OS_RESERVATION_ID
+  - cd examples/bee-launcher-example/vpic-paraview/bee-os/
+  - bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
 
 notifications:
   email: false
