@@ -4,6 +4,7 @@ install:
   - git clone https://github.com/lanl/BEE.git && cd ./BEE
   - git checkout jieyang-dev
   - ./install_on_travis.sh
+  - echo $PATH
 # Install other necesaary packages needed for the original CI
 script: 
 # Do original test.
