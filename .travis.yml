@@ -13,7 +13,7 @@ script:
 # Compose beefile for scalability test with parameters (e.g., # of nodes)
 # Do scalability test using VPIC as an example
   - cd examples/bee-launcher-example/vpic-paraview/bee-os/
-  - travis_wait 30 bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
+  - travis_wait 60 bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
 
 notifications:
   email: false
