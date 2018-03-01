@@ -12,8 +12,8 @@ script:
 # Push Docker image to DockerHub
 # Compose beefile for scalability test with parameters (e.g., # of nodes)
 # Do scalability test using VPIC as an example
-  - cd examples/bee-launcher-example/vpic-paraview/bee-os/
-  - travis_wait 120 bee_ci_launcher.py -l vpic -r $OS_RESERVATION_ID
+  - cd examples/bee-launcher-example/fecsale/bee-os/
+  - travis_wait 120 bee_ci_launcher.py -l fecsale -r $OS_RESERVATION_ID
 
 notifications:
   email: false
