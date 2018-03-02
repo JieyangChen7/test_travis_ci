@@ -8,7 +8,7 @@ install:
   - git checkout jieyang-dev
   - cd ..
   - ./BEE/travis_ci/push_results_to_repo.sh
-  - ./install_on_travis.sh
+#  - ./install_on_travis.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
   - echo $PATH
 # Install other necesaary packages needed for the original CI
