@@ -7,8 +7,8 @@ install:
   - git clone https://github.com/lanl/BEE.git && cd ./BEE
   - git checkout jieyang-dev
   - cd ..
-  - ./BEE/travis_ci/push_results_to_repo.sh
-#  - ./install_on_travis.sh
+#  - ./BEE/travis_ci/push_results_to_repo.sh
+  - ./install_on_travis.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
   - echo $PATH
 # Install other necesaary packages needed for the original CI
@@ -17,8 +17,8 @@ script:
 # Push Docker image to DockerHub
 # Compose beefile for scalability test with parameters (e.g., # of nodes)
 # Do scalability test using VPIC as an example
-#  - cd examples/bee-launcher-example/flecsale/bee-os/
-#  - travis_wait 120 bee_ci_launcher.py -l flecsale -r $OS_RESERVATION_ID
+  - cd examples/bee-launcher-example/flecsale/bee-os/
+  - travis_wait 120 bee_ci_launcher.py -l flecsale -r $OS_RESERVATION_ID
    - cd ..
 #   - ./BEE/travis_ci/push_results_to_repo.sh
 notifications:
