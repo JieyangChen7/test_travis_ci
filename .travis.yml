@@ -6,7 +6,7 @@ install:
   - echo $TRAVIS_REPO_SLUG
   - git clone https://github.com/lanl/BEE.git && cd ./BEE
   - git checkout jieyang-dev
-  - cd ..
+#  - cd ..
 #  - ./BEE/travis_ci/push_results_to_repo.sh
   - ./install_on_travis.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
