@@ -6,8 +6,8 @@ install:
   - echo $TRAVIS_REPO_SLUG
   - git clone https://github.com/lanl/BEE.git && cd ./BEE
   - git checkout jieyang-dev
-#  - cd ..
-#  - ./BEE/travis_ci/push_results_to_repo.sh
+# - cd ..
+# - ./BEE/travis_ci/push_results_to_repo.sh
   - ./install_on_travis.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
   - echo $PATH
@@ -19,7 +19,9 @@ script:
 # Do scalability test using VPIC as an example
   - cd examples/bee-launcher-example/flecsale2/bee-os/
   - travis_wait 120 bee_ci_launcher.py -l flecsale -r $OS_RESERVATION_ID
-   - cd ..
-#   - ./BEE/travis_ci/push_results_to_repo.sh
+  - cd ..
+  - ls
+  - result* >> scaliability_result_${TRAVIS_BUILD_NUMBER}.csv
+  - ./BEE/travis_ci/push_results_to_repo.sh
 notifications:
   email: false
