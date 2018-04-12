@@ -4,7 +4,7 @@ install:
   - echo $TRAVIS_BRANCH
   - echo $TRAVIS_BUILD_NUMBER
   - echo $TRAVIS_REPO_SLUG
-  - git clone https://github.com/lanl/BEE_Private.git && cd ./BEE_Private
+  - git clone https://${GH_TOKEN}@github.com/lanl/BEE_Private.git && cd ./BEE_Private
   - git checkout jieyang-dev
   - ./install_on_travis.sh
   - export PATH=$(pwd)/bee-launcher:$PATH
