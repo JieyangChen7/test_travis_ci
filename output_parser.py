@@ -1,6 +1,6 @@
 #!/usr/bin/python
-#import getpass
-#print(getpass.getuser())
+import getpass
+print(getpass.getuser())
 import glob
 output_file = open('bee_scalability_test_parsed.output','w')
 output_file.write("Num. of nodes, Proc. per node, Execution time\n")
